@@ -1,0 +1,32 @@
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Jekyll (GitHub Pages)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.*
