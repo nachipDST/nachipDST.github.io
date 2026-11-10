@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Decision support tool for modelling infrastructure of hydrogen-based renewable energy hubs.">
+
+<title>5&nbsp; Results – NACHIP DST</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./09_version_history.html" rel="next">
+<link href="./04_00_system_structure.html" rel="prev">
+<link href="./assets/img/00_preface/NACHIP.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05_results.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./assets/img/00_preface/NACHIP-small-logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./assets/img/00_preface/NACHIP-small-logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">NACHIP DST</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_getting_started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_interface_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Interface overview</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_00_system_structure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">System structure</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_results.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_version_history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Version history</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#opening-results" id="toc-opening-results" class="nav-link active" data-scroll-target="#opening-results"><span class="header-section-number">5.1</span> Opening results</a></li>
+  <li><a href="#quick-summary" id="toc-quick-summary" class="nav-link" data-scroll-target="#quick-summary"><span class="header-section-number">5.2</span> Quick summary</a></li>
+  <li><a href="#key-recommendations-optimal-sizes" id="toc-key-recommendations-optimal-sizes" class="nav-link" data-scroll-target="#key-recommendations-optimal-sizes"><span class="header-section-number">5.3</span> Key recommendations (optimal sizes)</a>
+  <ul>
+  <li><a href="#components-displayed" id="toc-components-displayed" class="nav-link" data-scroll-target="#components-displayed"><span class="header-section-number">5.3.1</span> Components displayed</a></li>
+  <li><a href="#how-to-interpret" id="toc-how-to-interpret" class="nav-link" data-scroll-target="#how-to-interpret"><span class="header-section-number">5.3.2</span> How to interpret</a></li>
+  </ul></li>
+  <li><a href="#financial-results" id="toc-financial-results" class="nav-link" data-scroll-target="#financial-results"><span class="header-section-number">5.4</span> Financial results</a>
+  <ul>
+  <li><a href="#costs-revenues-and-profits" id="toc-costs-revenues-and-profits" class="nav-link" data-scroll-target="#costs-revenues-and-profits"><span class="header-section-number">5.4.1</span> Costs, revenues, and profits</a></li>
+  <li><a href="#financial-indicators" id="toc-financial-indicators" class="nav-link" data-scroll-target="#financial-indicators"><span class="header-section-number">5.4.2</span> Financial indicators</a>
+  <ul class="collapse">
+  <li><a href="#payback-period" id="toc-payback-period" class="nav-link" data-scroll-target="#payback-period"><span class="header-section-number">5.4.2.1</span> Payback period</a></li>
+  <li><a href="#net-present-value-npv" id="toc-net-present-value-npv" class="nav-link" data-scroll-target="#net-present-value-npv"><span class="header-section-number">5.4.2.2</span> Net present value (NPV)</a></li>
+  <li><a href="#return-on-investment-roi" id="toc-return-on-investment-roi" class="nav-link" data-scroll-target="#return-on-investment-roi"><span class="header-section-number">5.4.2.3</span> Return on investment (ROI)</a></li>
+  <li><a href="#internal-rate-of-return-irr" id="toc-internal-rate-of-return-irr" class="nav-link" data-scroll-target="#internal-rate-of-return-irr"><span class="header-section-number">5.4.2.4</span> Internal rate of return (IRR)</a></li>
+  <li><a href="#levelized-cost-of-electricity-lcoe" id="toc-levelized-cost-of-electricity-lcoe" class="nav-link" data-scroll-target="#levelized-cost-of-electricity-lcoe"><span class="header-section-number">5.4.2.5</span> Levelized cost of electricity (LCOE)</a></li>
+  <li><a href="#levelized-cost-of-hydrogen-lcoh" id="toc-levelized-cost-of-hydrogen-lcoh" class="nav-link" data-scroll-target="#levelized-cost-of-hydrogen-lcoh"><span class="header-section-number">5.4.2.6</span> Levelized cost of hydrogen (LCOH)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#operational-overview" id="toc-operational-overview" class="nav-link" data-scroll-target="#operational-overview"><span class="header-section-number">5.5</span> Operational overview</a>
+  <ul>
+  <li><a href="#yearly-energy-flows" id="toc-yearly-energy-flows" class="nav-link" data-scroll-target="#yearly-energy-flows"><span class="header-section-number">5.5.1</span> Yearly energy flows</a></li>
+  <li><a href="#production-and-sales-profiles" id="toc-production-and-sales-profiles" class="nav-link" data-scroll-target="#production-and-sales-profiles"><span class="header-section-number">5.5.2</span> Production and sales profiles</a></li>
+  </ul></li>
+  <li><a href="#sec-results-el-flows" id="toc-sec-results-el-flows" class="nav-link" data-scroll-target="#sec-results-el-flows"><span class="header-section-number">5.6</span> Detailed el. energy flows</a></li>
+  <li><a href="#detailed-investment-specification" id="toc-detailed-investment-specification" class="nav-link" data-scroll-target="#detailed-investment-specification"><span class="header-section-number">5.7</span> Detailed investment specification</a>
+  <ul>
+  <li><a href="#components-included" id="toc-components-included" class="nav-link" data-scroll-target="#components-included"><span class="header-section-number">5.7.1</span> Components included</a></li>
+  <li><a href="#how-to-read-this-table" id="toc-how-to-read-this-table" class="nav-link" data-scroll-target="#how-to-read-this-table"><span class="header-section-number">5.7.2</span> How to read this table</a></li>
+  </ul></li>
+  <li><a href="#yearly-operation-summary" id="toc-yearly-operation-summary" class="nav-link" data-scroll-target="#yearly-operation-summary"><span class="header-section-number">5.8</span> Yearly operation summary</a>
+  <ul>
+  <li><a href="#hydrogen" id="toc-hydrogen" class="nav-link" data-scroll-target="#hydrogen"><span class="header-section-number">5.8.1</span> Hydrogen</a></li>
+  <li><a href="#oxygen" id="toc-oxygen" class="nav-link" data-scroll-target="#oxygen"><span class="header-section-number">5.8.2</span> Oxygen</a></li>
+  <li><a href="#heat" id="toc-heat" class="nav-link" data-scroll-target="#heat"><span class="header-section-number">5.8.3</span> Heat</a></li>
+  <li><a href="#water" id="toc-water" class="nav-link" data-scroll-target="#water"><span class="header-section-number">5.8.4</span> Water</a></li>
+  <li><a href="#waste-treatment" id="toc-waste-treatment" class="nav-link" data-scroll-target="#waste-treatment"><span class="header-section-number">5.8.5</span> Waste treatment</a></li>
+  </ul></li>
+  <li><a href="#electrolyser-details" id="toc-electrolyser-details" class="nav-link" data-scroll-target="#electrolyser-details"><span class="header-section-number">5.9</span> Electrolyser details</a>
+  <ul>
+  <li><a href="#information-provided" id="toc-information-provided" class="nav-link" data-scroll-target="#information-provided"><span class="header-section-number">5.9.1</span> Information provided</a></li>
+  </ul></li>
+  <li><a href="#sec-results-wt" id="toc-sec-results-wt" class="nav-link" data-scroll-target="#sec-results-wt"><span class="header-section-number">5.10</span> Waste treatment</a></li>
+  <li><a href="#green-vs-non-green-energy-balance" id="toc-green-vs-non-green-energy-balance" class="nav-link" data-scroll-target="#green-vs-non-green-energy-balance"><span class="header-section-number">5.11</span> Green vs non-green energy balance</a>
+  <ul>
+  <li><a href="#hydrogen-production-by-source" id="toc-hydrogen-production-by-source" class="nav-link" data-scroll-target="#hydrogen-production-by-source"><span class="header-section-number">5.11.1</span> Hydrogen production by source</a></li>
+  <li><a href="#bess-energy-flows" id="toc-bess-energy-flows" class="nav-link" data-scroll-target="#bess-energy-flows"><span class="header-section-number">5.11.2</span> BESS energy flows</a></li>
+  </ul></li>
+  <li><a href="#capacity-factors" id="toc-capacity-factors" class="nav-link" data-scroll-target="#capacity-factors"><span class="header-section-number">5.12</span> Capacity factors</a>
+  <ul>
+  <li><a href="#understanding-capacity-factors" id="toc-understanding-capacity-factors" class="nav-link" data-scroll-target="#understanding-capacity-factors"><span class="header-section-number">5.12.1</span> Understanding capacity factors</a></li>
+  </ul></li>
+  <li><a href="#sec-results-fin-spec" id="toc-sec-results-fin-spec" class="nav-link" data-scroll-target="#sec-results-fin-spec"><span class="header-section-number">5.13</span> Detailed financial specification</a></li>
+  <li><a href="#economic-viability-assessment" id="toc-economic-viability-assessment" class="nav-link" data-scroll-target="#economic-viability-assessment"><span class="header-section-number">5.14</span> Economic viability assessment</a>
+  <ul>
+  <li><a href="#primary-decision-metrics" id="toc-primary-decision-metrics" class="nav-link" data-scroll-target="#primary-decision-metrics"><span class="header-section-number">5.14.1</span> Primary decision metrics</a></li>
+  <li><a href="#secondary-considerations" id="toc-secondary-considerations" class="nav-link" data-scroll-target="#secondary-considerations"><span class="header-section-number">5.14.2</span> Secondary considerations</a></li>
+  </ul></li>
+  <li><a href="#exporting-results" id="toc-exporting-results" class="nav-link" data-scroll-target="#exporting-results"><span class="header-section-number">5.15</span> Exporting results</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-results" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>After running the optimization, the <strong>Results</strong> window displays the complete output of the optimization process. This chapter explains each section of the Results view.</p>
+<p>The Results window is organized into several collapsible sections, each presenting different aspects of the optimization output. The following sections provide detailed explanations of each component of the results.</p>
+<section id="opening-results" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="opening-results"><span class="header-section-number">5.1</span> Opening results</h2>
+<p>To view the results of a scenario:</p>
+<ol type="1">
+<li>In the <strong>Sidebar</strong>, expand the scenario you want to analyze</li>
+<li>Click on <strong>Results</strong></li>
+<li>The Main window will display results</li>
+</ol>
+<p>Results are only available after a successful optimization run.</p>
+</section>
+<section id="quick-summary" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="quick-summary"><span class="header-section-number">5.2</span> Quick summary</h2>
+<p>At the top of the Results window, a quick summary provides immediate insight into the investment viability:</p>
+<ul>
+<li><strong>Total profit</strong>: The amount of money the recommended investment could generate or save over the defined project lifetime compared to the no-investment case</li>
+<li><strong>Payback period</strong>: The number of years required for the investment to pay for itself through generated savings or revenue</li>
+</ul>
+</section>
+<section id="key-recommendations-optimal-sizes" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="key-recommendations-optimal-sizes"><span class="header-section-number">5.3</span> Key recommendations (optimal sizes)</h2>
+<p>The <strong>Key recommendations</strong> section presents the optimal sizes of all major components in your energy system. These are the capacities that the optimization algorithm has determined will maximize the economic performance while meeting all technical constraints.</p>
+<section id="components-displayed" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="components-displayed"><span class="header-section-number">5.3.1</span> Components displayed</h3>
+<p>The following components are shown with their optimal sizes:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PV capacity</strong></td>
+<td>kW</td>
+<td>Total photovoltaic system capacity</td>
+</tr>
+<tr class="even">
+<td><strong>Wind farm capacity</strong></td>
+<td>kW</td>
+<td>Installed wind turbine capacity</td>
+</tr>
+<tr class="odd">
+<td><strong>Leonitus WEC power</strong></td>
+<td>kW</td>
+<td>Installed power of the <a href="04_00_system_structure.html#sec-lwec">Leonitus wave energy converter</a></td>
+</tr>
+<tr class="even">
+<td><strong>Battery storage</strong></td>
+<td>kWh</td>
+<td>Total battery energy storage capacity</td>
+</tr>
+<tr class="odd">
+<td><strong>Battery converter</strong></td>
+<td>kW</td>
+<td>Power conversion system capacity for battery</td>
+</tr>
+<tr class="even">
+<td><strong>Electrolyser capacity</strong></td>
+<td>kW</td>
+<td>Total electrolyser capacity for hydrogen production</td>
+</tr>
+<tr class="odd">
+<td><strong>Fuel cell capacity</strong></td>
+<td>kW</td>
+<td>Total fuel cell capacity for power generation</td>
+</tr>
+<tr class="even">
+<td><strong>H2 storage</strong></td>
+<td>kg</td>
+<td>Hydrogen storage tank capacity</td>
+</tr>
+<tr class="odd">
+<td><strong>O2 storage</strong></td>
+<td>kg</td>
+<td>Oxygen storage tank capacity</td>
+</tr>
+<tr class="even">
+<td><strong>Hydrogenation unit</strong></td>
+<td>kg/h</td>
+<td>Hydrogenation unit capacity (hydrogen fed), LOHC export</td>
+</tr>
+<tr class="odd">
+<td><strong>Dehydrogenation unit</strong></td>
+<td>kg/h</td>
+<td>Dehydrogenation unit capacity (hydrogen released), LOHC import</td>
+</tr>
+<tr class="even">
+<td><strong>LOHC tank</strong></td>
+<td>kg</td>
+<td>LOHC tank capacity, as mass of hydrogen it holds when all LOHC is loaded</td>
+</tr>
+<tr class="odd">
+<td><strong>Grid connection</strong></td>
+<td>kW</td>
+<td>Electrical grid connection capacity</td>
+</tr>
+<tr class="even">
+<td><strong>Waste treatment plant capacity</strong></td>
+<td>t/day</td>
+<td>Total capacity of all <a href="04_00_system_structure.html#sec-wt">waste treatment</a> reactors, existing and new</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-to-interpret" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="how-to-interpret"><span class="header-section-number">5.3.2</span> How to interpret</h3>
+<ul>
+<li>Only components selected in the System structure are shown.</li>
+<li>Components with <strong>zero values</strong> are not recommended for installation in the optimal configuration.</li>
+<li>These sizes represent the economically optimal solution based on your inputs.</li>
+</ul>
+</section>
+</section>
+<section id="financial-results" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="financial-results"><span class="header-section-number">5.4</span> Financial results</h2>
+<p>The <strong>Financial Results</strong> section provides a comprehensive economic analysis of the optimized system.</p>
+<section id="costs-revenues-and-profits" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="costs-revenues-and-profits"><span class="header-section-number">5.4.1</span> Costs, revenues, and profits</h3>
+<p>This table presents the basic financial metrics:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Total investment cost (CAPEX)</strong></td>
+<td>The total upfront capital expenditure required to build the system, including all components and installation costs</td>
+</tr>
+<tr class="even">
+<td><strong>Yearly operational cost (OPEX)</strong></td>
+<td>Annual operating expenses including maintenance, consumables, and variable costs</td>
+</tr>
+<tr class="odd">
+<td><strong>Yearly revenue</strong></td>
+<td>Annual income generated from selling hydrogen, oxygen, heat, or electricity</td>
+</tr>
+<tr class="even">
+<td><strong>Yearly profit</strong></td>
+<td>Annual net profit defined as <span class="math inline">\(REVENUE - OPEX\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="financial-indicators" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="financial-indicators"><span class="header-section-number">5.4.2</span> Financial indicators</h3>
+<p>The financial indicators table provides advanced metrics for investment analysis.</p>
+<section id="payback-period" class="level4" data-number="5.4.2.1">
+<h4 data-number="5.4.2.1" class="anchored" data-anchor-id="payback-period"><span class="header-section-number">5.4.2.1</span> Payback period</h4>
+<p>The <strong>payback period</strong>, also refered to as <strong>payoff period</strong> represents the time required for the cumulative cash flows from the investment to equal the initial capital expenditure.</p>
+<p>Formula: <span class="math display">\[N_{payoff} = \frac{CAPEX}{Profit_{total} - Profit_{exist}}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(CAPEX\)</span> = Total investment cost</li>
+<li><span class="math inline">\(Profit_{total}\)</span> = Annual profit with the new system</li>
+<li><span class="math inline">\(Profit_{exist}\)</span> = Annual profit from existing infrastructure only</li>
+</ul>
+</section>
+<section id="net-present-value-npv" class="level4" data-number="5.4.2.2">
+<h4 data-number="5.4.2.2" class="anchored" data-anchor-id="net-present-value-npv"><span class="header-section-number">5.4.2.2</span> Net present value (NPV)</h4>
+<p><strong>NPV</strong> calculates the present value of all cash flows over the project lifetime, discounted at the specified rate. A positive NPV indicates that the investment is financially attractive.</p>
+<p>Formula: <span class="math display">\[NPV = -CAPEX + (Profit_{total} - Profit_{exist}) \times \frac{1 - (1+R)^{-N_{DL}}}{R}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(R\)</span> = Discount rate</li>
+<li><span class="math inline">\(N_{DL}\)</span> = Project lifetime in years</li>
+</ul>
+</section>
+<section id="return-on-investment-roi" class="level4" data-number="5.4.2.3">
+<h4 data-number="5.4.2.3" class="anchored" data-anchor-id="return-on-investment-roi"><span class="header-section-number">5.4.2.3</span> Return on investment (ROI)</h4>
+<p><strong>ROI</strong> expresses the total return on investment as a percentage over the project lifetime.</p>
+<p>Formula: <span class="math display">\[ROI = N_{DL} \times \frac{Profit_{total} - Profit_{exist}}{CAPEX} \times 100\%\]</span></p>
+</section>
+<section id="internal-rate-of-return-irr" class="level4" data-number="5.4.2.4">
+<h4 data-number="5.4.2.4" class="anchored" data-anchor-id="internal-rate-of-return-irr"><span class="header-section-number">5.4.2.4</span> Internal rate of return (IRR)</h4>
+<p><strong>IRR</strong> is the discount rate that makes the NPV equal to zero. It represents the effective annual return on the investment. If the IRR exceeds your required rate of return, the investment is worthwhile.</p>
+</section>
+<section id="levelized-cost-of-electricity-lcoe" class="level4" data-number="5.4.2.5">
+<h4 data-number="5.4.2.5" class="anchored" data-anchor-id="levelized-cost-of-electricity-lcoe"><span class="header-section-number">5.4.2.5</span> Levelized cost of electricity (LCOE)</h4>
+<p><strong>LCOE</strong> represents the average cost per unit of electricity produced by the system over its lifetime. It allows comparison with grid electricity prices or other generation technologies.</p>
+<p>Formula: <span class="math display">\[LCOE = \frac{PROFIT_{total\_without\_en} - PROFIT_{exist} - \frac{CAPEX}{N_{DL}}}{E_{consumed}} \times 1000\]</span></p>
+<p>Unit: €/MWh</p>
+<ul>
+<li><span class="math inline">\(PROFIT_{total\_without\_en}\)</span> stands for annual profit without cost of electricity in [€].</li>
+<li><span class="math inline">\(E_{consumed}\)</span> stands for annual amount of electricity imported into the hydrogen hub in [kWh].</li>
+</ul>
+</section>
+<section id="levelized-cost-of-hydrogen-lcoh" class="level4" data-number="5.4.2.6">
+<h4 data-number="5.4.2.6" class="anchored" data-anchor-id="levelized-cost-of-hydrogen-lcoh"><span class="header-section-number">5.4.2.6</span> Levelized cost of hydrogen (LCOH)</h4>
+<p><strong>LCOH</strong> represents the average cost per kilogram of hydrogen delivered by the hub: sold (H2 sales and gas grid injection), sold bound to LOHC (LOHC sales), and used locally by the fixed hydrogen consumption. This is particularly useful for comparing hydrogen production costs from different technologies or against market prices.</p>
+<p>Formula: <span class="math display">\[LCOH = \frac{\frac{CAPEX}{N_{DL}} + PROFIT_{exist} - PROFIT_{total\_without\_H2}}{m_{H2,sold}}\]</span></p>
+<p>Unit: €/kg</p>
+<ul>
+<li><span class="math inline">\(PROFIT_{total\_without\_H2}\)</span> stands for annual profit without revenue from selling hydrogen (H2 sales, gas grid injection, LOHC sales) and without the savings of the fixed hydrogen consumption [€].</li>
+<li><span class="math inline">\(m_{H2,sold}\)</span> stands for annual amount of hydrogen sold on the market, sold bound to LOHC, and used locally by the fixed hydrogen consumption in [kg].</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="operational-overview" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="operational-overview"><span class="header-section-number">5.5</span> Operational overview</h2>
+<p>The <strong>Operational Overview</strong> section shows how the optimized system operates over time.</p>
+<section id="yearly-energy-flows" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="yearly-energy-flows"><span class="header-section-number">5.5.1</span> Yearly energy flows</h3>
+<p>This table summarizes the annual energy flows for each component, expressed in MWh/year:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PV generation</strong></td>
+<td>Total electricity produced by photovoltaic system</td>
+</tr>
+<tr class="even">
+<td><strong>Wind farm generation</strong></td>
+<td>Total electricity produced by wind turbines</td>
+</tr>
+<tr class="odd">
+<td><strong>Leonitus WEC generation</strong></td>
+<td>Total electricity produced by the Leonitus wave energy converter</td>
+</tr>
+<tr class="even">
+<td><strong>Local REP generation</strong></td>
+<td>Local Renewable Energy Plant generation</td>
+</tr>
+<tr class="odd">
+<td><strong>RESu utilization</strong></td>
+<td>Renewable energy system utilization</td>
+</tr>
+<tr class="even">
+<td><strong>Electrolyser consumption</strong></td>
+<td>Electricity consumed by electrolyser for hydrogen production</td>
+</tr>
+<tr class="odd">
+<td><strong>Fuel cell generation</strong></td>
+<td>Electricity generated by fuel cell</td>
+</tr>
+<tr class="even">
+<td><strong>BESS charging</strong></td>
+<td>Energy that went in battery</td>
+</tr>
+<tr class="odd">
+<td><strong>BESS discharging</strong></td>
+<td>Energy discharged from battery</td>
+</tr>
+<tr class="even">
+<td><strong>Grid import</strong></td>
+<td>Electricity bought from the grid</td>
+</tr>
+<tr class="odd">
+<td><strong>Grid export</strong></td>
+<td>Electricity sold to the grid</td>
+</tr>
+<tr class="even">
+<td><strong>Fixed electricity consumption</strong></td>
+<td>Electricity used by the fixed electricity consumption</td>
+</tr>
+<tr class="odd">
+<td><strong>WT el. en. production/consumption</strong></td>
+<td>Net electrical energy of all waste treatment reactors. A positive value is production, a negative value is consumption</td>
+</tr>
+<tr class="even">
+<td><strong>Total production</strong></td>
+<td>Sum of all electricity produced on site</td>
+</tr>
+</tbody>
+</table>
+<p>Only rows of the selected components with non-zero values are shown.</p>
+</section>
+<section id="production-and-sales-profiles" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="production-and-sales-profiles"><span class="header-section-number">5.5.2</span> Production and sales profiles</h3>
+<p>The operational overview includes interactive charts showing:</p>
+<ol type="1">
+<li><p><strong>Electrical Power Flows</strong>: A time-series chart showing electricity generation and consumption over the simulation period: renewable sources (PV, wind farm, Leonitus WEC, LREP, RESu), fuel cell, net power of the waste treatment plant (<strong>WT net el. power</strong>), electrolyser, dehydrogenation unit, battery charging and discharging, fixed electricity consumption and grid power.</p></li>
+<li><p><strong>Non-Electrical Flows</strong>: Shows hydrogen production, treated waste, hydrogen sales (including gas grid injection), oxygen sales, local hydrogen consumption, LOHC sales and purchase, and heat sales over time. <strong>Hydrogen production</strong> includes hydrogen from electrolysers, hydrogen released by the dehydrogenation unit and hydrogen produced by the waste treatment reactors.</p></li>
+<li><p><strong>Tank States (Mass)</strong>: Shows the hydrogen (green and non-green), oxygen, loaded LOHC and waste storage levels over time.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The daily electrical chart does not contain all consumers, e.g.&nbsp;compressors, the water demineralizer or the heat pump. The complete electricity balance is shown in the <a href="#sec-results-el-flows">Detailed el. energy flows</a> section.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-results-el-flows" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="sec-results-el-flows"><span class="header-section-number">5.6</span> Detailed el. energy flows</h2>
+<p>This section contains the <strong>Detailed Electrical Power Flows</strong> chart with every electrical power flow that enters the electricity balance of the site in each time step:</p>
+<ul>
+<li><strong>Production</strong> is shown as <strong>positive</strong>: PV, wind farm, Leonitus WEC, LREP, RESu, battery discharging, fuel cell and net power of the waste treatment plant (when it produces electricity).</li>
+<li><strong>Consumption</strong> is shown as <strong>negative</strong>: battery charging, electrolyser, water demineralizer, H2 compressor 1 and 2, hydrogenation unit, dehydrogenation unit, water pump, O2 compressor, heat pump and fixed electricity consumption.</li>
+<li><strong>Grid (+ import)</strong>: electricity exchanged with the grid. A positive value is import from the grid and a negative value is export to the grid.</li>
+</ul>
+<p>The sum of all flows in every time step is zero. Use this chart to find which consumers use the electricity that is not visible in the daily chart of the operational overview. For example, H2 compressor 1 can consume a significant share of electricity when hydrogen is compressed from a low outlet pressure to the storage pressure.</p>
+<p>Only the components selected in the System structure are shown.</p>
+</section>
+<section id="detailed-investment-specification" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="detailed-investment-specification"><span class="header-section-number">5.7</span> Detailed investment specification</h2>
+<p>The <strong>Detailed investment specification</strong> section provides a breakdown of each component’s optimal size and corresponding investment cost.</p>
+<section id="components-included" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="components-included"><span class="header-section-number">5.7.1</span> Components included</h3>
+<p>The table includes all system components with a new (optimized) size larger than zero:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 25%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PV system</td>
+<td>kWp</td>
+<td>Solar photovoltaic installation</td>
+</tr>
+<tr class="even">
+<td>Wind farm</td>
+<td>kWp</td>
+<td>Wind turbine installation</td>
+</tr>
+<tr class="odd">
+<td>Leonitus WEC</td>
+<td>kW</td>
+<td>Leonitus wave energy converter power</td>
+</tr>
+<tr class="even">
+<td>Battery storage</td>
+<td>kWh</td>
+<td>Battery capacity</td>
+</tr>
+<tr class="odd">
+<td>Battery converter</td>
+<td>kW</td>
+<td>Power electronics for battery</td>
+</tr>
+<tr class="even">
+<td>Electrolyser</td>
+<td>kW</td>
+<td>Hydrogen production equipment, one row per electrolyser</td>
+</tr>
+<tr class="odd">
+<td>Fuel cell</td>
+<td>kW</td>
+<td>Power generation from hydrogen, one row per fuel cell</td>
+</tr>
+<tr class="even">
+<td>Hydrogen tank</td>
+<td>kg</td>
+<td>Hydrogen storage vessel</td>
+</tr>
+<tr class="odd">
+<td>Oxygen tank</td>
+<td>kg</td>
+<td>Oxygen storage vessel</td>
+</tr>
+<tr class="even">
+<td>Hydrogenation unit</td>
+<td>kg/h</td>
+<td>Loading of hydrogen into LOHC</td>
+</tr>
+<tr class="odd">
+<td>Dehydrogenation unit</td>
+<td>kg/h</td>
+<td>Release of hydrogen from LOHC</td>
+</tr>
+<tr class="even">
+<td>LOHC tank (incl.&nbsp;carrier)</td>
+<td>kg</td>
+<td>LOHC storage, including the carrier</td>
+</tr>
+<tr class="odd">
+<td>Grid connection</td>
+<td>kW</td>
+<td>Electrical grid interface</td>
+</tr>
+<tr class="even">
+<td>H2 compressor 1/2</td>
+<td>kg/h</td>
+<td>Hydrogen compression equipment</td>
+</tr>
+<tr class="odd">
+<td>O2 compressor</td>
+<td>kg/h</td>
+<td>Oxygen compression equipment</td>
+</tr>
+<tr class="even">
+<td>Water demineralizer</td>
+<td>kW</td>
+<td>Water treatment for electrolysis</td>
+</tr>
+<tr class="odd">
+<td>Water pump</td>
+<td>kW</td>
+<td>Water supply pumping</td>
+</tr>
+<tr class="even">
+<td>Water grid connection</td>
+<td>kg/h</td>
+<td>Municipal water connection</td>
+</tr>
+<tr class="odd">
+<td>Body of water</td>
+<td>kg/h</td>
+<td>Groundwater extraction</td>
+</tr>
+<tr class="even">
+<td>Rainwater harvesting</td>
+<td>m²</td>
+<td>Rainwater collection area</td>
+</tr>
+<tr class="odd">
+<td>Water tank</td>
+<td>m³</td>
+<td>Water storage</td>
+</tr>
+<tr class="even">
+<td>Low temp heat exchanger</td>
+<td>kW</td>
+<td>Low-temperature heat recovery</td>
+</tr>
+<tr class="odd">
+<td>High temp heat exchanger</td>
+<td>kW</td>
+<td>High-temperature heat recovery</td>
+</tr>
+<tr class="even">
+<td>Heat pump</td>
+<td>kW</td>
+<td>Heat pump for temperature upgrade</td>
+</tr>
+<tr class="odd">
+<td>Thermal storage</td>
+<td>kWh</td>
+<td>Thermal energy storage</td>
+</tr>
+<tr class="even">
+<td>District heating connection</td>
+<td>kW</td>
+<td>District heating network interface</td>
+</tr>
+<tr class="odd">
+<td>H2 grid connection</td>
+<td>kg/h</td>
+<td>Hydrogen pipeline or delivery connection</td>
+</tr>
+<tr class="even">
+<td>Waste treatment reactor</td>
+<td>t/day</td>
+<td>Waste treatment reactor, one row per reactor</td>
+</tr>
+<tr class="odd">
+<td>Waste storage</td>
+<td>t</td>
+<td>Storage of waste before treatment</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-to-read-this-table" class="level3" data-number="5.7.2">
+<h3 data-number="5.7.2" class="anchored" data-anchor-id="how-to-read-this-table"><span class="header-section-number">5.7.2</span> How to read this table</h3>
+<ul>
+<li><strong>Optimal Size</strong>: The capacity recommended by the optimization</li>
+<li><strong>Investment Cost</strong>: The calculated capital cost based on the component’s cost parameters</li>
+<li>Components with zero size are not recommended for the optimal configuration</li>
+</ul>
+</section>
+</section>
+<section id="yearly-operation-summary" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="yearly-operation-summary"><span class="header-section-number">5.8</span> Yearly operation summary</h2>
+<p>This section provides a detailed breakdown of annual production and consumption quantities for all resources:</p>
+<section id="hydrogen" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="hydrogen"><span class="header-section-number">5.8.1</span> Hydrogen</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Hydrogen production</strong></td>
+<td>Total hydrogen produced by the electrolyser(s) in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>Hydrogen sales (green)</strong></td>
+<td>Green hydrogen sold (produced from renewable sources) in kg/year</td>
+</tr>
+<tr class="odd">
+<td><strong>Hydrogen sales (non-green)</strong></td>
+<td>Non-green hydrogen sold (from grid electricity) in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>Hydrogen to grid</strong></td>
+<td>Hydrogen delivered to external grid/pipeline in kg/year</td>
+</tr>
+<tr class="odd">
+<td><strong>Local hydrogen consumption (green / non-green)</strong></td>
+<td>Hydrogen used by the fixed hydrogen consumption in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>Hydrogen bought for local consumption</strong></td>
+<td>Part of the fixed hydrogen consumption bought from outside the hub in kg/year</td>
+</tr>
+<tr class="odd">
+<td><strong>Hydrogen fed to hydrogenation</strong></td>
+<td>Hydrogen loaded into the LOHC by the hydrogenation unit in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>LOHC sales (green / non-green, bound H2)</strong></td>
+<td>Loaded LOHC sold, as bound hydrogen, in kg/year</td>
+</tr>
+<tr class="odd">
+<td><strong>LOHC purchase (bound H2)</strong></td>
+<td>Loaded LOHC bought, as bound hydrogen, in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>Hydrogen released from LOHC</strong></td>
+<td>Hydrogen released by the dehydrogenation unit in kg/year</td>
+</tr>
+<tr class="odd">
+<td><strong>Hydrogen production (waste treatment)</strong></td>
+<td>Hydrogen produced by all waste treatment reactors in kg/year</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="oxygen" class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="oxygen"><span class="header-section-number">5.8.2</span> Oxygen</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Oxygen production</strong></td>
+<td>Total oxygen produced as a by-product of electrolysis in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>Oxygen sales</strong></td>
+<td>Oxygen sold to external customers in kg/year</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="heat" class="level3" data-number="5.8.3">
+<h3 data-number="5.8.3" class="anchored" data-anchor-id="heat"><span class="header-section-number">5.8.3</span> Heat</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Low temperature heat generation</strong></td>
+<td>Waste heat recovered at lower temperatures (e.g., from electrolyser) in MWh/year</td>
+</tr>
+<tr class="even">
+<td><strong>High temperature heat generation</strong></td>
+<td>Waste heat recovered at higher temperatures (electrolyser and hydrogenation unit) in MWh/year</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="water" class="level3" data-number="5.8.4">
+<h3 data-number="5.8.4" class="anchored" data-anchor-id="water"><span class="header-section-number">5.8.4</span> Water</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Water consumption</strong></td>
+<td>Water consumed by the electrolyser for hydrogen production in kg/year</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="waste-treatment" class="level3" data-number="5.8.5">
+<h3 data-number="5.8.5" class="anchored" data-anchor-id="waste-treatment"><span class="header-section-number">5.8.5</span> Waste treatment</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Treated waste</strong></td>
+<td>Waste treated by all waste treatment reactors in t/year</td>
+</tr>
+<tr class="even">
+<td><strong>Tar production</strong></td>
+<td>Tar produced by the reactors in kg/year</td>
+</tr>
+<tr class="odd">
+<td><strong>CO2 emissions</strong></td>
+<td>CO<sub>2</sub> emitted by the reactors in kg/year</td>
+</tr>
+<tr class="even">
+<td><strong>Carbon black production</strong></td>
+<td>Carbon black produced by the reactors in kg/year</td>
+</tr>
+</tbody>
+</table>
+<p>Only resources with values larger than zero are shown.</p>
+</section>
+</section>
+<section id="electrolyser-details" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="electrolyser-details"><span class="header-section-number">5.9</span> Electrolyser details</h2>
+<p>When multiple electrolysers are configured, this section provides a detailed breakdown of each electrolyser stack:</p>
+<section id="information-provided" class="level3" data-number="5.9.1">
+<h3 data-number="5.9.1" class="anchored" data-anchor-id="information-provided"><span class="header-section-number">5.9.1</span> Information provided</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Electrolyser</strong></td>
+<td>Name/identifier of the electrolyser</td>
+</tr>
+<tr class="even">
+<td><strong>Size (kW)</strong></td>
+<td>Installed capacity of this specific electrolyser</td>
+</tr>
+<tr class="odd">
+<td><strong>Investment (€)</strong></td>
+<td>Investment cost allocated to this electrolyser</td>
+</tr>
+<tr class="even">
+<td><strong>H2 production (kg/year)</strong></td>
+<td>Annual hydrogen production from this electrolyser</td>
+</tr>
+</tbody>
+</table>
+<p>This detailed view helps you understand:</p>
+<ul>
+<li>Which electrolyser types are recommended</li>
+<li>How the total electrolyser capacity is distributed</li>
+<li>Individual electrolyser utilization rates</li>
+</ul>
+</section>
+</section>
+<section id="sec-results-wt" class="level2" data-number="5.10">
+<h2 data-number="5.10" class="anchored" data-anchor-id="sec-results-wt"><span class="header-section-number">5.10</span> Waste treatment</h2>
+<p>This section is shown only when the <a href="04_00_system_structure.html#sec-wt">Waste treatment plant</a> is selected. It contains one table with one row per waste treatment reactor, named as the reactor in the System structure, and the <strong>Total</strong> row with the sum over all reactors. All values include the existing and the new (optimized) capacity together.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 13%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Capacity</strong></td>
+<td>t/day</td>
+<td>Size of the reactor, i.e.&nbsp;the amount of waste it can treat per day</td>
+</tr>
+<tr class="even">
+<td><strong>Treated waste</strong></td>
+<td>t/year</td>
+<td>Amount of waste treated by the reactor</td>
+</tr>
+<tr class="odd">
+<td><strong>Hyd. prod.</strong></td>
+<td>kg/year</td>
+<td>Hydrogen produced by the reactor. It is always counted as non-green hydrogen</td>
+</tr>
+<tr class="even">
+<td><strong>El. en. prod.</strong></td>
+<td>MWh/year</td>
+<td>Net electrical energy of the reactor, including the starting surge after maintenance. A negative value means that the reactor consumes more electricity than it produces</td>
+</tr>
+<tr class="odd">
+<td><strong>Ht. en. prod.</strong></td>
+<td>MWh/year</td>
+<td>Usable high- and low-temperature heat produced by the reactor</td>
+</tr>
+</tbody>
+</table>
+<p>A value is shown as <strong>N/A</strong> if it could not be calculated from the optimization results.</p>
+<p>Costs and revenues of the waste treatment plant, the waste source and the waste storage are shown in the <a href="#sec-results-fin-spec">Detailed financial specification</a> section.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Annual values are calculated from the simulation period and scaled to one year.</p>
+</div>
+</div>
+</section>
+<section id="green-vs-non-green-energy-balance" class="level2" data-number="5.11">
+<h2 data-number="5.11" class="anchored" data-anchor-id="green-vs-non-green-energy-balance"><span class="header-section-number">5.11</span> Green vs non-green energy balance</h2>
+<p>This section provides insight into the origin of energy used and hydrogen produced. This is particularly important for:</p>
+<ul>
+<li>Green hydrogen certification</li>
+<li>Carbon footprint analysis</li>
+<li>Sustainability reporting</li>
+</ul>
+<section id="hydrogen-production-by-source" class="level3" data-number="5.11.1">
+<h3 data-number="5.11.1" class="anchored" data-anchor-id="hydrogen-production-by-source"><span class="header-section-number">5.11.1</span> Hydrogen production by source</h3>
+<p>This table shows the origin of all hydrogen that enters the hub:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>kg/year</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Produced green</strong></td>
+<td>Amount</td>
+<td>%</td>
+</tr>
+<tr class="even">
+<td><strong>Produced non-green</strong></td>
+<td>Amount</td>
+<td>%</td>
+</tr>
+<tr class="odd">
+<td><strong>Imported green</strong></td>
+<td>Amount</td>
+<td>%</td>
+</tr>
+<tr class="even">
+<td><strong>Imported non-green</strong></td>
+<td>Amount</td>
+<td>%</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td>Amount</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Produced green</strong>: Hydrogen produced by electrolysers using renewable energy sources (PV, wind, Leonitus WEC, etc.)</li>
+<li><strong>Produced non-green</strong>: Hydrogen produced by electrolysers using grid electricity, and all hydrogen produced by the waste treatment reactors</li>
+<li><strong>Imported green</strong>: Hydrogen released by the dehydrogenation unit from bought green LOHC</li>
+<li><strong>Imported non-green</strong>: Hydrogen released by the dehydrogenation unit from bought non-green LOHC</li>
+</ul>
+<p>Only rows with values larger than zero are shown.</p>
+</section>
+<section id="bess-energy-flows" class="level3" data-number="5.11.2">
+<h3 data-number="5.11.2" class="anchored" data-anchor-id="bess-energy-flows"><span class="header-section-number">5.11.2</span> BESS energy flows</h3>
+<p>For battery storage systems, this table shows the source of energy used for charging:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flow</th>
+<th>Green (MWh)</th>
+<th>Non-green (MWh)</th>
+<th>Total (MWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Charging</strong></td>
+<td>From RES</td>
+<td>From grid</td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td><strong>Discharging</strong></td>
+<td>-</td>
+<td>-</td>
+<td>Total</td>
+</tr>
+</tbody>
+</table>
+<p>This helps you understand the environmental characteristics of your battery operation.</p>
+</section>
+</section>
+<section id="capacity-factors" class="level2" data-number="5.12">
+<h2 data-number="5.12" class="anchored" data-anchor-id="capacity-factors"><span class="header-section-number">5.12</span> Capacity factors</h2>
+<p><strong>Capacity factors</strong> indicate how intensively each component is being used relative to its maximum potential.</p>
+<section id="understanding-capacity-factors" class="level3" data-number="5.12.1">
+<h3 data-number="5.12.1" class="anchored" data-anchor-id="understanding-capacity-factors"><span class="header-section-number">5.12.1</span> Understanding capacity factors</h3>
+<p>The capacity factor is calculated as: <span class="math display">\[CF = \frac{Average\ Output}{Installed\ Capacity} \times 100\%\]</span></p>
+<p>The table has columns <strong>Installed Capacity</strong>, <strong>Avg Output</strong> and <strong>Capacity Factor</strong>, and contains the following components, if they are selected and their installed capacity is larger than zero:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 13%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Unit</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PV</strong></td>
+<td>kW</td>
+<td>Electricity production</td>
+</tr>
+<tr class="even">
+<td><strong>Wind Farm</strong></td>
+<td>kW</td>
+<td>Electricity production</td>
+</tr>
+<tr class="odd">
+<td><strong>Leonitus WEC</strong></td>
+<td>kW</td>
+<td>Electricity production</td>
+</tr>
+<tr class="even">
+<td><strong>Electrolyser (Total)</strong> and each electrolyser</td>
+<td>kW</td>
+<td>Electricity consumption</td>
+</tr>
+<tr class="odd">
+<td><strong>Fuel Cell</strong></td>
+<td>kW</td>
+<td>Electricity production</td>
+</tr>
+<tr class="even">
+<td><strong>BESS Converter</strong></td>
+<td>kW</td>
+<td>Mean of the average charging and the average discharging power</td>
+</tr>
+<tr class="odd">
+<td><strong>Hydrogenation Unit</strong></td>
+<td>kg/h</td>
+<td>Hydrogen fed into the LOHC</td>
+</tr>
+<tr class="even">
+<td><strong>Dehydrogenation Unit</strong></td>
+<td>kg/h</td>
+<td>Hydrogen released from the LOHC</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="sec-results-fin-spec" class="level2" data-number="5.13">
+<h2 data-number="5.13" class="anchored" data-anchor-id="sec-results-fin-spec"><span class="header-section-number">5.13</span> Detailed financial specification</h2>
+<p>The <strong>Detailed Financial Specification</strong> section shows the costs and revenues of every component selected in the System structure and of the components it depends on (e.g.&nbsp;water supply and compressors of the electrolyser). One row is shown per component, and the <strong>Total</strong> row is the sum of all rows. Values include the existing and the new parts together.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 13%">
+<col style="width: 53%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CAPEX</strong></td>
+<td>€</td>
+<td>Investment cost of the new capacity of the component</td>
+</tr>
+<tr class="even">
+<td><strong>Revenue</strong></td>
+<td>€/year</td>
+<td>Yearly revenue of the component, e.g.&nbsp;selling hydrogen, oxygen, LOHC, heat or carbon black, or remuneration for taking waste</td>
+</tr>
+<tr class="odd">
+<td><strong>Operation cost</strong></td>
+<td>€/year</td>
+<td>Yearly operating cost of the component, e.g.&nbsp;grid connection fee, water, LOHC purchase, local hydrogen or heat bought from outside the hub, tar treatment and CO<sub>2</sub> emissions</td>
+</tr>
+<tr class="even">
+<td><strong>Degradation cost</strong></td>
+<td>€/year</td>
+<td>Yearly cost of degradation (wear) of the component</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul>
+<li><strong>Electricity supply (purchase - sale)</strong> is the yearly cost of electricity bought from the grid minus revenue from electricity sold to the grid. It is negative if more electricity is sold than bought.</li>
+<li><strong>Battery (storage and converter)</strong> combines the battery storage and its power converter.</li>
+<li>Waste treatment results are split into <strong>Waste treatment plant</strong> (all reactors), <strong>Waste source</strong> (remuneration for taking waste) and <strong>Waste storage</strong>.</li>
+<li>Maintenance costs are not included in this table.</li>
+</ul>
+</section>
+<section id="economic-viability-assessment" class="level2" data-number="5.14">
+<h2 data-number="5.14" class="anchored" data-anchor-id="economic-viability-assessment"><span class="header-section-number">5.14</span> Economic viability assessment</h2>
+<p>When evaluating the results, consider the following key indicators:</p>
+<section id="primary-decision-metrics" class="level3" data-number="5.14.1">
+<h3 data-number="5.14.1" class="anchored" data-anchor-id="primary-decision-metrics"><span class="header-section-number">5.14.1</span> Primary decision metrics</h3>
+<ol type="1">
+<li><p><strong>Payback Period</strong>: How long until the investment pays for itself.</p></li>
+<li><p><strong>NPV</strong>: Whether the investment creates value</p>
+<ul>
+<li>Positive NPV: Investment creates value</li>
+<li>Negative NPV: Investment destroys value</li>
+</ul></li>
+<li><p><strong>IRR</strong>: The effective return on investment</p>
+<ul>
+<li>Compare against your required rate of return or cost of capital</li>
+</ul></li>
+</ol>
+</section>
+<section id="secondary-considerations" class="level3" data-number="5.14.2">
+<h3 data-number="5.14.2" class="anchored" data-anchor-id="secondary-considerations"><span class="header-section-number">5.14.2</span> Secondary considerations</h3>
+<ul>
+<li><strong>LCOE/LCOH</strong>: Compare against current market prices</li>
+<li><strong>Capacity factors</strong>: Higher utilization generally means better returns</li>
+<li><strong>Green hydrogen percentage</strong>: Important for sustainability goals and green hydrogen certifications</li>
+</ul>
+</section>
+</section>
+<section id="exporting-results" class="level2" data-number="5.15">
+<h2 data-number="5.15" class="anchored" data-anchor-id="exporting-results"><span class="header-section-number">5.15</span> Exporting results</h2>
+<p>Results can be exported to an HTML file by clicking the <strong>Export results to HTML</strong> button at the top of the Results window. A dialog opens where the name and location of the file are chosen; by default, the file is saved in the project folder and named as the scenario.</p>
+<p>The exported file can be opened in any web browser and contains:</p>
+<ul>
+<li>all result tables shown in the Results window (charts are not exported)</li>
+<li><strong>User inputs</strong> – the input parameters of all components selected in the scenario</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04_00_system_structure.html" class="pagination-link" aria-label="System structure">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">System structure</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./09_version_history.html" class="pagination-link" aria-label="Version history">
+        <span class="nav-page-text">Version history</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
