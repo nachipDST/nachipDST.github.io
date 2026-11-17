@@ -174,7 +174,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#v1.1.0-build-002" id="toc-v1.1.0-build-002" class="nav-link active" data-scroll-target="#v1.1.0-build-002">2026-11-09 v1.1.0 build 002</a></li>
+  <li><a href="#v1.1.2-build-004" id="toc-v1.1.2-build-004" class="nav-link active" data-scroll-target="#v1.1.2-build-004">2026-11-17 v1.1.2 build 004</a></li>
+  <li><a href="#v1.1.0-build-002" id="toc-v1.1.0-build-002" class="nav-link" data-scroll-target="#v1.1.0-build-002">2026-11-09 v1.1.0 build 002</a></li>
   <li><a href="#v1.0.0-build-001" id="toc-v1.0.0-build-001" class="nav-link" data-scroll-target="#v1.0.0-build-001">2026-11-02 v1.0.0 build 001</a></li>
   </ul>
 </nav>
@@ -201,6 +202,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="v1.1.2-build-004" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="v1.1.2-build-004">2026-11-17 v1.1.2 build 004</h2>
+<ul>
+<li>bug: the application crashed on macOS when it was closed</li>
+<li>feature: macOS (Apple silicon) and Ubuntu/Linux (x86_64) versions, in addition to Windows; installers are built automatically on GitHub</li>
+<li>feature: water tank level is an optimization variable; water cannot flow from the tank back into the water grid</li>
+</ul>
+</section>
 <section id="v1.1.0-build-002" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="v1.1.0-build-002">2026-11-09 v1.1.0 build 002</h2>
 <p>2026-11-09 v1.1.0 build 002 - feature: Leonitus wave energy converter (Leonitus WEC) replaces the classic wave energy converter; it is sized by installed power and priced by the wave potential of the site - feature: power consumption of the compressor before the H2 tank (HCOMP1), of the H2 sales compressor (HCOMP2, per customer) and of the O2 sales compressor (OCOMP) is calculated instead of entered - feature: compressors keep only the minimum inlet and maximum outlet pressure - feature: battery lifetime input in BESS, separate from the power converter - feature: “Restore defaults” buttons in waste heat sections - feature: HTML report exports all inputs, the system diagram, profiles and charts; chart data can be downloaded as CSV - feature: the system diagram is shown on the results page - feature: rename dialogs are preloaded with the current name - bug: PVGIS and renewables.ninja profiles converted to local time; fixed time of plots - bug: H2 sales compressor tooltips were offset by one row - bug: waste heat error - bug: wind farm error</p>

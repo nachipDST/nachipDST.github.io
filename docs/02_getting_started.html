@@ -207,7 +207,8 @@ window.Quarto = {
   <ul>
   <li><a href="#network" id="toc-network" class="nav-link" data-scroll-target="#network"><span class="header-section-number">2.1.1</span> Network</a></li>
   </ul></li>
-  <li><a href="#simple-example" id="toc-simple-example" class="nav-link" data-scroll-target="#simple-example"><span class="header-section-number">2.2</span> Simple example</a>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">2.2</span> Installation</a></li>
+  <li><a href="#simple-example" id="toc-simple-example" class="nav-link" data-scroll-target="#simple-example"><span class="header-section-number">2.3</span> Simple example</a>
   <ul>
   <li><a href="#step-1-launch-the-application" id="toc-step-1-launch-the-application" class="nav-link" data-scroll-target="#step-1-launch-the-application">Step 1: Launch the application</a></li>
   <li><a href="#step-2-create-a-new-project" id="toc-step-2-create-a-new-project" class="nav-link" data-scroll-target="#step-2-create-a-new-project">Step 2: Create a new project</a></li>
@@ -223,7 +224,7 @@ window.Quarto = {
   <li><a href="#step-12-run-optimization" id="toc-step-12-run-optimization" class="nav-link" data-scroll-target="#step-12-run-optimization">Step 12: Run optimization</a></li>
   <li><a href="#step-13-view-results" id="toc-step-13-view-results" class="nav-link" data-scroll-target="#step-13-view-results">Step 13: View Results</a></li>
   </ul></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">2.3</span> Next steps</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">2.4</span> Next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -251,10 +252,9 @@ window.Quarto = {
 
 <section id="system-requirements" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="system-requirements"><span class="header-section-number">2.1</span> System requirements</h2>
-<p>The NACHIP Decision Support Tool (DST) is a Windows desktop application.</p>
+<p>The NACHIP Decision Support Tool (DST) is a desktop application for Windows, macOS and Linux.</p>
 <ul>
-<li><strong>Operating system</strong>: Windows 10 or newer (64-bit)<br>
-</li>
+<li><strong>Operating system</strong>: Windows 10 or newer (64-bit), macOS 13 or newer on Apple silicon (M1 or newer), or Ubuntu 22.04 or newer (64-bit, x86_64)</li>
 <li><strong>Processor (CPU)</strong>: No strict requirements<br>
 </li>
 <li><strong>Memory (RAM)</strong>: Minimum 16 GB, 32 GB or more recommended<br>
@@ -274,8 +274,18 @@ window.Quarto = {
 <p>The application can run offline, but these features will be unavailable.</p>
 </section>
 </section>
-<section id="simple-example" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="simple-example"><span class="header-section-number">2.2</span> Simple example</h2>
+<section id="installation" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="installation"><span class="header-section-number">2.2</span> Installation</h2>
+<p>Each release has an installation file for every supported operating system:</p>
+<ul>
+<li><strong>Windows</strong>: run <code>NACHIP_DST_installer_v&lt;version&gt;.exe</code> and follow the installer. The application is started from the Start menu or the desktop shortcut.</li>
+<li><strong>macOS</strong>: open <code>nachip-dst-&lt;version&gt;-macos-arm64.dmg</code> and drag <em>NACHIP DST</em> to <em>Applications</em>. The application is not signed by Apple, so on the first start right-click it and choose <em>Open</em> (or run <code>xattr -dr com.apple.quarantine "/Applications/NACHIP DST.app"</code> in Terminal).</li>
+<li><strong>Ubuntu/Linux</strong>: install the package with <code>sudo apt install ./nachip-dst_&lt;version&gt;_amd64.deb</code>. The application is started from the applications menu or with the command <code>nachip-dst</code>.</li>
+</ul>
+<p>Logs and temporary files are stored in the user folder: <code>%APPDATA%\NACHIP DST</code> on Windows, <code>~/Library/Application Support/NACHIP DST</code> on macOS and <code>~/.local/share/NACHIP DST</code> on Linux.</p>
+</section>
+<section id="simple-example" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="simple-example"><span class="header-section-number">2.3</span> Simple example</h2>
 <p>This section guides you through creating a simple project with one scenario containing:</p>
 <ul>
 <li>A <strong>Photovoltaic (PV) system</strong>,</li>
@@ -539,8 +549,8 @@ Figure&nbsp;2.12: Showing results of the optimization
 <p>The Main window now displays the calculated optimal system configuration, its optimal operation, and financial indicators.</p>
 </section>
 </section>
-<section id="next-steps" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">2.3</span> Next steps</h2>
+<section id="next-steps" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">2.4</span> Next steps</h2>
 <p>You have now created a project and optimized a scenario with a simple PV + BESS system. Based on your location’s solar resources and your specified constraints, the optimization algorithm has determined:</p>
 <ul>
 <li>Optimal system sizes</li>
