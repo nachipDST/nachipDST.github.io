@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "NACHIP DST",
     "section": "",
-    "text": "Preface\nThis is the documentation for version 1.1.2. (Version history). For download link and other useful information see the main project website.\nThis user manual introduces the Decision Support Tool (DST), a practical and user-friendly solution for planning and sizing investments in integrated energy systems based on green hydrogen technologies. The tool enables users to evaluate how locally available renewable energy and other resources can be optimally converted into green hydrogen and efficiently integrated with electricity, heating, and water networks. By quantifying the costs, revenues, and optimal sizes of every component, it facilitates the monetization of new technologies and supports the calibration of the hydrogen value chain, from energy supply to end use.\nThe DST delivers techno-economic insights, including optimal system configuration, CAPEX/OPEX estimates, and key financial indicators such as NPV, IRR, and ROI. Designed for municipalities, energy planners, development agencies, and investors, the DST supports informed, data-driven decisions for developing cost-effective and future-ready hydrogen hubs.\nKey Features of the DST:",
+    "text": "Preface\nThis is the documentation for version 1.1.3. (Version history). For download link and other useful information see the main project website.\nThis user manual introduces the Decision Support Tool (DST), a practical and user-friendly solution for planning and sizing investments in integrated energy systems based on green hydrogen technologies. The tool enables users to evaluate how locally available renewable energy and other resources can be optimally converted into green hydrogen and efficiently integrated with electricity, heating, and water networks. By quantifying the costs, revenues, and optimal sizes of every component, it facilitates the monetization of new technologies and supports the calibration of the hydrogen value chain, from energy supply to end use.\nThe DST delivers techno-economic insights, including optimal system configuration, CAPEX/OPEX estimates, and key financial indicators such as NPV, IRR, and ROI. Designed for municipalities, energy planners, development agencies, and investors, the DST supports informed, data-driven decisions for developing cost-effective and future-ready hydrogen hubs.\nKey Features of the DST:",
     "crumbs": [
       "Preface"
     ]
@@ -404,7 +404,17 @@
     "href": "09_version_history.html",
     "title": "Version history",
     "section": "",
-    "text": "2026-11-17 v1.1.2 build 004",
+    "text": "2026-11-18 v1.1.3 build 005",
+    "crumbs": [
+      "Version history"
+    ]
+  },
+  {
+    "objectID": "09_version_history.html#v1.1.3-build-005",
+    "href": "09_version_history.html#v1.1.3-build-005",
+    "title": "Version history",
+    "section": "",
+    "text": "bug: the application kept running after it was closed (on macOS, it stayed in the Dock and had to be force quit) because map tile download threads could hang\nbug: map tiles could not be downloaded on Linux because the SSL certificates were not found",
     "crumbs": [
       "Version history"
     ]
@@ -413,8 +423,8 @@
     "objectID": "09_version_history.html#v1.1.2-build-004",
     "href": "09_version_history.html#v1.1.2-build-004",
     "title": "Version history",
-    "section": "",
-    "text": "bug: the application crashed on macOS when it was closed\nfeature: macOS (Apple silicon) and Ubuntu/Linux (x86_64) versions, in addition to Windows; installers are built automatically on GitHub\nfeature: water tank level is an optimization variable; water cannot flow from the tank back into the water grid",
+    "section": "2026-11-17 v1.1.2 build 004",
+    "text": "2026-11-17 v1.1.2 build 004\n\nbug: the application crashed on macOS when it was closed\nfeature: macOS (Apple silicon) and Ubuntu/Linux (x86_64) versions, in addition to Windows; installers are built automatically on GitHub\nfeature: water tank level is an optimization variable; water cannot flow from the tank back into the water grid",
     "crumbs": [
       "Version history"
     ]
